@@ -7,7 +7,7 @@ import java.util.List;
  */
 public interface CodeGenerator {
 
-    List<String> GenerateCode();
+    char[] GenerateCode();
 
 }
 

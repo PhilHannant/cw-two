@@ -9,13 +9,34 @@ import java.util.List;
  */
 public class CodeGenImpl implements CodeGenerator {
 
-    //method with switch statement to generate code
+    private char[] code;
+    private int charNo;
+    private final char[] colours = {'r', 'b', 'y', 'g'};
 
 
+    public CodeGenImpl(){
+        charNo = 4;
+        GenerateCode();
+
+    }
 
     @Override
-    public List<String> GenerateCode() {
-        //could we use a seperate code or peg class/enums?
-        return null;
+    public  char[] GenerateCode() {
+        code = new char[4];
+        double ranum;
+
+        for(int i = 0; i<code.length; i++){
+            ranum=Math.random();
+
+            for(int j = 1; j<=charNo;j++){
+                if (ranum <= j/charNo){
+                    code[i]=colours[j-1];
+                }
+            }
+
+        }
+
+
+        return code;
     }
 }
