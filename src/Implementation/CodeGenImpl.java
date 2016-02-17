@@ -11,7 +11,7 @@ public class CodeGenImpl implements CodeGenerator {
 
     private char[] code;
     private double charNo;
-    private final char[] colours = {'r', 'b', 'y', 'g'};
+    private final char[] colours = {'r', 'b', 'y', 'g', 'o', 'p'};
 
 
     public CodeGenImpl(){
