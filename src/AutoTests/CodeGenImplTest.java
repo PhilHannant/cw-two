@@ -14,7 +14,7 @@ public class CodeGenImplTest {
 
     private char[] returnCode;
     private CodeGenImpl coIm;
-    private char[] colours = {'r', 'b', 'y', 'g'};
+    private char[] colours = {'r', 'b', 'y', 'g', 'o', 'p'};
     private boolean colbol = false;
     private boolean[] colarray = new boolean[4];
     private boolean[] coleq = {true, true, true, true};

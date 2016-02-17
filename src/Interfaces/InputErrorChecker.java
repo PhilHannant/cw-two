@@ -7,6 +7,6 @@ import java.util.List;
  */
 public interface InputErrorChecker {
 
-   boolean ErrorCheck(List<String> input);
+   boolean ErrorCheck(char[] input);
 
 }
