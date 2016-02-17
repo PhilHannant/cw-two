@@ -18,6 +18,7 @@ public class GameImpl extends GameAbstractImpl {
     int GameState = 0;
     char[] Answer;
     int[] CorrectMarkers;
+    char[] Code;
 
     /**
      * Create a Game object.
@@ -37,16 +38,18 @@ public class GameImpl extends GameAbstractImpl {
         InParse = new InputParserImpl();
 
 
+
     }
 
     @Override
     public void runGames() {
         System.out.println(IntGen.Message(GameState));
+        Code = CodeGen.GenerateCode();
         GameState = 1;
         while(GCount.GuessLeft() > 0 || GameState == 2){
             System.out.println(IntGen.Message(GameState));
             Answer = InParse.InputParser(InCheck);
-            CorrectMarkers = GuessCheck.CheckGuess(Answer);
+            CorrectMarkers = GuessCheck.CheckGuess(Answer, Code);
             GCount.GuessOccured();
             if (CorrectMarkers == GuessCheck.CorrectAns()) GameState = 2;
         }

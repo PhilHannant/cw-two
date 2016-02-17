@@ -5,7 +5,7 @@ package Interfaces;
  */
 public interface GuessChecker {
 
-    int[] CheckGuess(char[] Ans);
+    int[] CheckGuess(char[] Ans, char[] Code);
 
     int[] CorrectAns();
 
