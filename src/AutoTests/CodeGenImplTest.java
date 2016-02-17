@@ -15,6 +15,9 @@ public class CodeGenImplTest {
     private char[] returnCode;
     private CodeGenImpl coIm;
     private char[] colours = {'r', 'b', 'y', 'g'};
+    private boolean colbol = false;
+    private boolean[] colarray = new boolean[4];
+    private boolean[] coleq = {true, true, true, true};
 
     @Before
     public void setUp(){
@@ -31,7 +34,13 @@ public class CodeGenImplTest {
 
     @Test
     public void testColours(){
-
+        for(int i=0; i< returnCode.length;i++){
+            for(int j=0; j<colours.length;j++){
+                if (returnCode[i] == colours[j]) colbol = true;
+            }
+            colarray[i] = colbol;
+        }
+        assertArrayEquals(coleq, colarray );
     }
 
 }
