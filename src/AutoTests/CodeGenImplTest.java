@@ -38,8 +38,10 @@ public class CodeGenImplTest {
             for(int j=0; j<colours.length;j++){
                 if (returnCode[i] == colours[j]) colbol = true;
             }
+            System.out.print(returnCode[i] + ", ");
             colarray[i] = colbol;
         }
+
         assertArrayEquals(coleq, colarray );
     }
 
