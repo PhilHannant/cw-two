@@ -2,8 +2,6 @@ package Implementation;
 
 import Interfaces.CodeGenerator;
 
-import java.util.List;
-
 /**
  * Created by digibrose on 13/02/2016.
  */
@@ -16,7 +14,7 @@ public class CodeGenImpl implements CodeGenerator {
 
     public CodeGenImpl(){
         charNo = 4;
-        GenerateCode();
+      //  GenerateCode();
 
     }
 
@@ -40,6 +38,17 @@ public class CodeGenImpl implements CodeGenerator {
 
 
         return code;
+    }
+
+    @Override
+    public String toString(){
+
+        String ret ="";
+
+        for (char i:code){
+            ret = ret + i;
+        }
+        return ret;
     }
 
 }

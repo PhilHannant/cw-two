@@ -30,6 +30,7 @@ public class InputParserImpl implements InputParser {
             }
 
         }
+        cor = false;
         return output;
     }
 }

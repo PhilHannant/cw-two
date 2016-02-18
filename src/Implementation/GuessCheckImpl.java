@@ -14,7 +14,10 @@ public class GuessCheckImpl implements GuessChecker {
 
         for(int i = 0; i < Code.length ; i++ ){
             for (int j = 0; j < Code.length; j++){
-                if (Ans[i] == Code[j] && Ans[i] != Code[i]) ret[0]++;
+                if (Ans[i] == Code[j] && Ans[i] != Code[i]){
+                    ret[0]++;
+                    break;
+                }
             }
         }
 

@@ -36,6 +36,7 @@ public class GameImpl extends GameAbstractImpl {
         GCount = new GuessCounterImpl();
         InCheck = new InCheckImpl();
         InParse = new InputParserImpl();
+        GReset = new GameResetImpl();
 
 
 
@@ -45,16 +46,19 @@ public class GameImpl extends GameAbstractImpl {
     public void runGames() {
         System.out.println(IntGen.Message(GameState));
         Code = CodeGen.GenerateCode();
+        System.out.println("Code is " + CodeGen.toString());
         GameState = 1;
-        while(GCount.GuessLeft() > 0 || GameState == 2){
+        while(GCount.GuessLeft() > 0 && GameState != 2) {
+            System.out.println("YOu have " + GCount.GuessLeft() + " Guesses left");
             System.out.println(IntGen.Message(GameState));
             Answer = InParse.InputParser(InCheck);
             CorrectMarkers = GuessCheck.CheckGuess(Answer, Code);
+            System.out.println("You got " + CorrectMarkers[0] + " White Markers and " + CorrectMarkers[1] + " Black Markers");
             GCount.GuessOccured();
-            if (CorrectMarkers == GuessCheck.CorrectAns()) GameState = 2;
+            if (CorrectMarkers[1] == Code.length) GameState = 2;
         }
         if (GameState == 1) GameState = 3;
-        IntGen.Message(GameState);
-        GReset.ResetGame(this);
+        System.out.println(IntGen.Message(GameState));
+        GReset.ResetGame();
     }
 }

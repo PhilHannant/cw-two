@@ -5,6 +5,6 @@ package Interfaces;
  */
 public interface GameReset {
 
-    Game ResetGame(Game Game);
+    void ResetGame();
 
 }
