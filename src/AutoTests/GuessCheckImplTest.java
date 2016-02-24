@@ -32,4 +32,17 @@ public class GuessCheckImplTest {
         assertEquals(expected[1], output[1]);
         assertEquals(expected[0], output[0]);
     }
+
+    @Test
+    public void testCheckGuessPosition2() {
+        GuessCheckImpl gc = new GuessCheckImpl();
+        char[] inputCode = {'g', 'y', 'g', 'g'};
+        char[] inputAnswer = {'o', 'o', 'y', 'y'};
+        int[] expected = {1, 0};
+        int[] output = gc.CheckGuess(inputAnswer, inputCode);
+        assertEquals(expected[1], output[1]);
+        assertEquals(expected[0], output[0]);
+    }
+
+
 }
