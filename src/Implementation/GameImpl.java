@@ -4,24 +4,24 @@ import java.util.Arrays;
 
 import Interfaces.*;
 
-
+import org.springframework.stereotype.Component;
 /**
  * Created by digibrose on 13/02/2016.
  */
 public class GameImpl extends GameAbstractImpl {
 
-    InteractionGenerator IntGen;
-    CodeGenerator CodeGen;
-    GuessChecker GuessCheck;
-    InputErrorChecker InCheck;
-    InputParser InParse;
-    GuessCounter GCount;
-    GameReset GReset;
-    boolean endGame = false;
-    int GameState = 0;
-    char[] Answer;
-    int[] CorrectMarkers;
-    char[] Code;
+    private InteractionGenerator IntGen;
+    private CodeGenerator CodeGen;
+    private GuessChecker GuessCheck;
+    private InputErrorChecker InCheck;
+    private InputParser InParse;
+    private GuessCounter GCount;
+    private  GameReset GReset;
+    private  boolean endGame = false;
+    private int GameState = 0;
+    private char[] Answer;
+    private int[] CorrectMarkers;
+    private  char[] Code;
 
     /**
      * Create a Game object.
