@@ -10,20 +10,31 @@ public class GuessCheckImpl implements GuessChecker {
     @Override
     public int[] CheckGuess(char[] Ans, char[] Code) {
 
+        char[] inCode = Code.clone();
+
+
         int[] ret = new int[2];
 
-        for(int i = 0; i < Code.length ; i++ ){
-            for (int j = 0; j < Code.length; j++){
-                if (Ans[i] == Code[j] && Ans[i] != Code[i]){
+        for (int k = 0; k < inCode.length; k++ ){
+            if (Ans[k] == inCode[k]) {
+                ret[1]++;
+                Ans[k] = 0;
+                inCode[k] = 0;
+            }
+        }
+
+        for(int i = 0; i < inCode.length ; i++ ){
+            for (int j = 0; j < inCode.length; j++){
+                if (Ans[i] == inCode[j] && Ans[i] != inCode[i]){
                     ret[0]++;
+                    Ans[i] = 0;
+                    inCode[j] = 0;
                     break;
                 }
             }
         }
 
-        for (int k = 0; k < Code.length; k++ ){
-            if (Ans[k] == Code[k]) ret[1]++;
-        }
+
 
         return ret;
     }
