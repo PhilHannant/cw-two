@@ -3,7 +3,7 @@ package Implementation;
 import Interfaces.GuessChecker;
 
 /**
- * Created by digibrose on 13/02/2016.
+ * Created by digibrose on 13/02/2016. comment
  */
 public class GuessCheckImpl implements GuessChecker {
 
