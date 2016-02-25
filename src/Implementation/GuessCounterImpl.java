@@ -7,7 +7,11 @@ import Interfaces.GuessCounter;
  */
 public class GuessCounterImpl implements GuessCounter {
 
-    private int guess = 15;
+    private int guess;
+
+    public GuessCounterImpl(int guess) {
+        this.guess = guess;
+    }
 
     @Override
     public void GuessOccured() {
