@@ -19,7 +19,28 @@
     </constructor-arg>
 
 </bean>
-<bean id="IntGen" class="Implementation.IntGenImpl">
+    <bean id="IntGen" class="Implementation.IntGenImpl">
 
-</bean>
+    </bean>
+    <bean id="CodeGen" class="Implementation.CodeGenImpl">
+
+    </bean>
+    <bean id="GuessCheck" class="Implementation.GuessCheckImpl">
+
+    </bean>
+    <bean id="InCheck" class="Implementation.InCheckImpl">
+
+    </bean>
+    <bean id="InParse" class="Implementation.InputParserImpl">
+
+    </bean>
+    <bean id="GCount" class="Implementation.GuessCounterImpl">
+
+    </bean>
+    <bean id="GReset" class="Implementation.GameResetImpl">
+
+    </bean>
+
+
 </beans>
+

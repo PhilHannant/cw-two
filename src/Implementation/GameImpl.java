@@ -10,12 +10,17 @@ public class GameImpl extends GameAbstractImpl {
 
     @Autowired
     private InteractionGenerator IntGen;
-
+    @Autowired
     private CodeGenerator CodeGen;
+    @Autowired
     private GuessChecker GuessCheck;
+    @Autowired
     private InputErrorChecker InCheck;
+    @Autowired
     private InputParser InParse;
+    @Autowired
     private GuessCounter GCount;
+    @Autowired
     private  GameReset GReset;
     private  boolean endGame = false;
     private int GameState = 0;
@@ -37,12 +42,12 @@ public class GameImpl extends GameAbstractImpl {
 
      //   IntGen = new IntGenImpl();
 
-        CodeGen = new CodeGenImpl();
-        GuessCheck = new GuessCheckImpl();
-        GCount = new GuessCounterImpl();
-        InCheck = new InCheckImpl();
-        InParse = new InputParserImpl();
-        GReset = new GameResetImpl();
+//        CodeGen = new CodeGenImpl();
+//        GuessCheck = new GuessCheckImpl();
+//        GCount = new GuessCounterImpl();
+//        InCheck = new InCheckImpl();
+//        InParse = new InputParserImpl();
+//        GReset = new GameResetImpl();
 
 
 
