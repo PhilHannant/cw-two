@@ -28,7 +28,10 @@
     <bean id="GuessCheck" class="Implementation.GuessCheckImpl">
 
     </bean>
+
     <bean id="InCheck" class="Implementation.InCheckImpl">
+        <constructor-arg value="{r,o,b,g,y,p}"/>
+        <constructor-arg value="4"/>
 
     </bean>
     <bean id="InParse" class="Implementation.InputParserImpl">

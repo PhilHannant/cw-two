@@ -9,10 +9,17 @@ import java.util.List;
  */
 public class InCheckImpl implements InputErrorChecker {
 
-    private int codeLength = 4;
-    private char[] colours = {'r', 'b', 'y', 'g', 'o', 'p'};
+    private int codeLength;
+    private char[] colours;
     private boolean colbol = false;
-    private boolean[] colarray = new boolean[4];
+    private boolean[] colarray = new boolean[codeLength];
+
+    public InCheckImpl(char[] colours, int codeLength) {
+        this.colours = colours;
+        this.codeLength = codeLength;
+    }
+
+
 
 
     @Override
