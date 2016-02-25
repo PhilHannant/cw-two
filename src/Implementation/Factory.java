@@ -10,7 +10,7 @@ public class Factory {
         BeanFactory factory = getBeanFactory();
         Game GI = (Game) factory.getBean("gameImpl");
 
-        return new GameImpl(b);
+        return GI;
     }
 
     private static BeanFactory getBeanFactory() throws Exception {

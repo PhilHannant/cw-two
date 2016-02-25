@@ -1,16 +1,16 @@
 package Implementation;
 
-import java.util.Arrays;
-
 import Interfaces.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import org.springframework.stereotype.Component;
 /**
  * Created by digibrose on 13/02/2016.
  */
 public class GameImpl extends GameAbstractImpl {
 
+    @Autowired
     private InteractionGenerator IntGen;
+
     private CodeGenerator CodeGen;
     private GuessChecker GuessCheck;
     private InputErrorChecker InCheck;
@@ -33,7 +33,10 @@ public class GameImpl extends GameAbstractImpl {
      */
     public GameImpl(boolean easy) {
         super(easy);
-        IntGen = new IntGenImpl();
+
+
+     //   IntGen = new IntGenImpl();
+
         CodeGen = new CodeGenImpl();
         GuessCheck = new GuessCheckImpl();
         GCount = new GuessCounterImpl();
@@ -46,7 +49,7 @@ public class GameImpl extends GameAbstractImpl {
     }
 
     @Override
-    public void runGames() {
+    public void runGames() throws Exception {
         System.out.println(IntGen.Message(GameState));
         Code = CodeGen.GenerateCode();
         System.out.println("Code is " + CodeGen.toString());

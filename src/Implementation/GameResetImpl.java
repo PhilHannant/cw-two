@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class GameResetImpl implements GameReset {
     @Override
-    public void ResetGame() {
+    public void ResetGame() throws Exception {
 
         System.out.println("Would you like to rest the game?");
 
