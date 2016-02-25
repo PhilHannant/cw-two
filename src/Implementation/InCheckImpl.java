@@ -12,11 +12,13 @@ public class InCheckImpl implements InputErrorChecker {
     private int codeLength;
     private char[] colours;
     private boolean colbol = false;
-    private boolean[] colarray = new boolean[codeLength];
+    private boolean[] colarray;
+
 
     public InCheckImpl(char[] colours, int codeLength) {
         this.colours = colours;
         this.codeLength = codeLength;
+        this.colarray = new boolean[codeLength];
     }
 
 
