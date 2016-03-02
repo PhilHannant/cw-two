@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/cw-two.iml" filepath="$PROJECT_DIR$/cw-two.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mastermind-scala/mastermind-scala.iml" filepath="$PROJECT_DIR$/mastermind-scala/mastermind-scala.iml" />
     </modules>
   </component>
 </project>
