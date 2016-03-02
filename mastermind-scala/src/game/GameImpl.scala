@@ -1,10 +1,10 @@
 package game
 
-trait Game {
+
+class GameImpl() extends Game {
   /**
     * Run a one or more game sof mastermind, until the player
     * quits.
     */
-  def runGames
+  override def runGames: Unit = ???
 }
-
