@@ -1,5 +1,4 @@
-package game
-
+package traits
 
 trait Colours
 case object Red extends Colours
