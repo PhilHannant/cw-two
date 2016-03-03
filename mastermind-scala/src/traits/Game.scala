@@ -1,4 +1,4 @@
-package game
+package traits
 
 trait Game {
   /**

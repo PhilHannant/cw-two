@@ -1,6 +1,7 @@
 package game
 
 import sun.plugin2.message.GetAppletMessage
+import traits.Game
 
 object Factory {
 

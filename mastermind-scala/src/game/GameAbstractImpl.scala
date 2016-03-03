@@ -1,5 +1,7 @@
 package game
 
+import traits.Game
+
 abstract class GameAbstractImpl extends Game {
   private var showCode: Boolean = false
 
