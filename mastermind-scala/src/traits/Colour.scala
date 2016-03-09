@@ -14,7 +14,7 @@ object Injector extends App{
   val colour = Vector (Red, Blue, Purple, Yellow, Green, Orange )
 
 
-  val code = List.tabulate(4)(n => colour((Math.random()*6).toInt))
+  val code = Array.tabulate(4)(n => colour((Math.random()*6).toInt))
   print(code.toList)
 
 
