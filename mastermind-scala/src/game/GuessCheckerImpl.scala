@@ -22,7 +22,7 @@ class GuessCheckerImpl extends GuessChecker{
     def white(): Int = {
       var w = 0
       for (i <- code1.indices; j <-code1.indices){
-        if (ans1(j).equals(code1(j)) && !ans1(i).equals(code1(i))){
+        if (ans1(i).equals(code1(j)) && !ans1(i).equals(code1(i))){
           w = w + 1; code1.update(j, Blank)
         }
       };w
