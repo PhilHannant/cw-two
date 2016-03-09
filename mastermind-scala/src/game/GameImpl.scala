@@ -24,7 +24,7 @@ class GameImpl() extends Game {
       println(Injector.IntGen.Message(GameState))
       val Answer = Injector.InParse.Input(Injector.Incheck)
       val CorrectMarkers = Injector.GuessCheck.CheckGuess(Answer, Code)
-      println("You Got " + CorrectMarkers(0) + " White Markers and " + CorrectMarkers(1) + " Black Markers")
+      println("You Got " + CorrectMarkers(1) + " White Markers and " + CorrectMarkers(0) + " Black Markers")
       Injector.GCount.GuessOccured
       if (CorrectMarkers(1) == Code.length) GameState = 2
     }

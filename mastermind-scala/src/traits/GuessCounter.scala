@@ -3,7 +3,7 @@ package traits
 
 trait GuessCounter {
 
-  def GuessCorrect
+  def GuessOccured
   
   def GuessLeft :Int
 }
