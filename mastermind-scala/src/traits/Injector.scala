@@ -8,6 +8,8 @@ case object Yellow extends Colours
 case object Green extends Colours
 case object Orange extends Colours
 case object Blank extends Colours
+case object Black extends Colours
+case object White extends Colours
 
 trait Injector {
 
