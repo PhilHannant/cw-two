@@ -9,20 +9,20 @@ case object Green extends Colours
 case object Orange extends Colours
 case object Blank extends Colours
 
-object Injector extends App {
+trait Injector {
 
-  val codeLength: Int = 4
-  val colour = Vector(Red, Blue, Purple, Yellow, Green, Orange)
-  val code :Array[Colours] = Array.fill(4)(colour((Math.random() * 6).toInt))
+  lazy val codeLength: Int = 4
+  lazy val colour = Vector(Red, Blue, Purple, Yellow, Green, Orange)
+  lazy val inCode :Array[Colours] = Array.fill(4)(colour((Math.random() * 6).toInt))
 
   print("code is " + code.toList)
 
-  val IntGen  :InteractionGenerator = ???
-  val GuessCheck :GuessChecker = ???
-  val Incheck :InputErrorChecker = ???
-  val InParse :InputParser = ???
-  val GCount :GuessCounter = ???
-  val GReset :GameReset = ???
+  lazy val IntGen  :InteractionGenerator = ???
+  lazy val GuessCheck :GuessChecker = ???
+  lazy val Incheck :InputErrorChecker = ???
+  lazy val InParse :InputParser = ???
+  lazy val GCount :GuessCounter = ???
+  lazy val GReset :GameReset = ???
 
 }
 

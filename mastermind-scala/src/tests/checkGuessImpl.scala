@@ -11,4 +11,6 @@ class checkGuessImpl extends UnitSpec {
     assert(BlackWhite(1) ==2)
   }
 
+
+
 }
