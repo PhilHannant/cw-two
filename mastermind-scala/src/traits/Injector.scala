@@ -17,7 +17,7 @@ trait Injector {
   lazy val colour = Vector(Red, Blue, Purple, Yellow, Green, Orange)
   lazy val inCode :Array[Colours] = Array.fill(4)(colour((Math.random() * 6).toInt))
 
-  print("code is " + code.toList)
+//  print("code is " + code.toList)
 
   lazy val IntGen  :InteractionGenerator = ???
   lazy val GuessCheck :GuessChecker = ???

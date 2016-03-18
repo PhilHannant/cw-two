@@ -22,7 +22,7 @@ class GameImpl() extends Game with Injector {
     while(GCount.GuessLeft > 0 && GameState != 2 ){
       println("You have " + GCount.GuessLeft + " Guesses left")
       println(IntGen.Message(GameState))
-      val Answer = InParse.Input(Incheck)
+      val Answer = InParse.Input()
       val CorrectMarkers = GuessCheck.CheckGuess(Answer, Code)
       println("You Got " + CorrectMarkers(1) + " White Markers and " + CorrectMarkers(0) + " Black Markers")
       GCount.GuessOccured

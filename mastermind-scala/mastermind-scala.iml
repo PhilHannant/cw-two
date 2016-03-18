@@ -7,17 +7,27 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="scalatest_2.11-2.2.6" level="project" />
+    <orderEntry type="library" exported="" name="scala-sdk-2.11.7" level="application" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/External Jars/scalatest_2.11-2.2.6.jar!/" />
+          <root url="file://$USER_HOME$/scala-2.11.7/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$USER_HOME$/scala-2.11.7/lib" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/scalatest_2.11-2.2.6.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="scalatest_2.11-2.2.6" level="project" />
-    <orderEntry type="library" exported="" name="scala-sdk-2.11.7" level="application" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">
