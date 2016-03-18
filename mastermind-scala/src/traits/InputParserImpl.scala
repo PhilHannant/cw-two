@@ -1,0 +1,6 @@
+package traits
+
+
+class InputParserImpl {
+
+}
