@@ -1,10 +1,11 @@
 package game
 
 
-import traits.GuessCounter
+import traits.{Values, GuessCounter}
 
-class GuessCountImpl(var guess:Int) extends GuessCounter {
+class GuessCountImpl() extends GuessCounter with Values{
 
+  var guess = guessNumber
 
   override def GuessOccured: Unit = {
       guess = guess - 1
