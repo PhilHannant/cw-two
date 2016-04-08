@@ -18,8 +18,8 @@ case object White extends Colours
 trait Values {
   lazy val codeLength: Int = 4
   lazy val colour = Vector(Red, Blue, Purple, Yellow, Green, Orange)
-  lazy val inCode: Array[Colours] = Array.fill(4)(colour((Math.random() * 6).toInt))
-  lazy val CharMap: Vector[Char] = colour.map(n => n.productPrefix.charAt(0))
+  lazy val charMap: Vector[Char] = colour.map(n => n.productPrefix.charAt(0))
+  lazy val guessNumber = 20
 }
 
 trait Injector {
@@ -27,7 +27,7 @@ trait Injector {
   lazy val GuessCheck = wire [GuessCheckerImpl]
   lazy val Incheck = wire [InputErrorCheckerImpl]
   lazy val InParse = wire [InputParserImpl]
-  lazy val GCount = wire [GuessCheckerImpl]
+  lazy val GCount = wire [GuessCountImpl]
   lazy val GReset = wire [GameResetImpl]
 
 }

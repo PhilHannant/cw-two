@@ -9,24 +9,24 @@ class InputParserImpl(inputErrorChecker: InputErrorChecker) extends InputParser 
 
 
 
-  override def Input(): Array[Colours] = {
+  override def Input(): List[Colours] = {
     val input = io.StdIn.readLine()
     val field = CodeIn(input)
-    val inColour: Array [Colours] = field.map(n => colpos(n))
+    val inColour: List [Colours] = field.map(n => colpos(n))
     inColour
   }
 
 
   def colpos(in :Char) :Colours = {
       var c :Colours = Blank
-      CharMap.zipWithIndex.foreach {
+      charMap.zipWithIndex.foreach {
         case (x, i) => if (in == x) c = colour(i)
       }
       c
     }
 
-  def CodeIn(in: String): Array [Char] = {
-    val inField = in.toCharArray
+  def CodeIn(in: String): List [Char] = {
+    val inField = in.toCharArray.to[List]
     if (!inputErrorChecker.ErrorCheck(inField)){
       println("Sorry wrong input")
       val input = io.StdIn.readLine()

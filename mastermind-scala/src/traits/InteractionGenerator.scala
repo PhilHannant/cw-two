@@ -3,5 +3,5 @@ package traits
 
 trait InteractionGenerator {
 
-  def Message(mes: Int)
+  def Message(mes: Int): String
 }

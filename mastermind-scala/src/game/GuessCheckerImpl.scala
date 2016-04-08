@@ -5,10 +5,10 @@ import traits._
 
 class GuessCheckerImpl extends GuessChecker{
 
-  override def CheckGuess(ans: Array[Colours], code: Array[Colours]): Array[Int] = {
+  override def CheckGuess(ans: List[Colours], code: List[Colours]): Array[Int] = {
 
-    val ans1 = ans.map(x => x)
-    val code1 = code.map(x => x)
+    val ans1 = ans.map(x => x).toArray
+    val code1 = code.map(x => x).toArray
 
     def black(): Int = {
       var b = 0

@@ -3,6 +3,6 @@ package traits
 
 trait InputErrorChecker {
 
-  def ErrorCheck(input: Array[Colours]) : Boolean
+  def ErrorCheck(input: List[Char]) : Boolean
 
 }

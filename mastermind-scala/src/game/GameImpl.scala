@@ -3,7 +3,7 @@ package game
 import traits._
 
 
-class GameImpl() extends GameAbstractImpl {
+class GameImpl() extends GameAbstractImpl(Factory.getEasy()) {
   /**
     * Run a one or more game sof mastermind, until the player
     * quits.
@@ -11,7 +11,7 @@ class GameImpl() extends GameAbstractImpl {
 
 
   var gameState = 0
-  val code :Array[Colours] = Array.fill(codeLength)(colour((Math.random() * colour.length).toInt))
+  val code :List[Colours] = List.fill(codeLength)(colour((Math.random() * colour.length).toInt))
 
 
   override def runGames = {

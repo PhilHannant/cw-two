@@ -2,8 +2,6 @@ package game
 
 import traits.{Values, Injector, Game}
 
-import scala.Enumeration.ValueSet
-
 abstract class GameAbstractImpl extends Game with Injector with Values {
   private var showCode: Boolean = false
 

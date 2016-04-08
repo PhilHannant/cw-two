@@ -3,6 +3,6 @@ package traits
 
 trait GuessChecker {
 
-    def CheckGuess(ans: Array[Colours], code: Array[Colours]) :Array[Int]
+    def CheckGuess(ans: List[Colours], code: List[Colours]) :Array[Int]
 
 }
