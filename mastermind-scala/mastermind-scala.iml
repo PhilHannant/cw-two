@@ -154,6 +154,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="com.softwaremill.macwire:macros_2.11:2.2.2" level="project" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">

@@ -1,5 +1,8 @@
 package traits
 
+import com.softwaremill.macwire._
+import game._
+
 trait Colours
 case object Red extends Colours
 case object Blue extends Colours
@@ -20,12 +23,12 @@ trait Values {
 }
 
 trait Injector {
-  lazy val IntGen  :InteractionGenerator = ???
-  lazy val GuessCheck :GuessChecker = ???
-  lazy val Incheck :InputErrorChecker = ???
-  lazy val InParse :InputParser = ???
-  lazy val GCount :GuessCounter = ???
-  lazy val GReset :GameReset = ???
+  lazy val IntGen  = wire [IntGenImpl]
+  lazy val GuessCheck = wire [GuessCheckerImpl]
+  lazy val Incheck = wire [InputErrorCheckerImpl]
+  lazy val InParse = wire [InputParserImpl]
+  lazy val GCount = wire [GuessCheckerImpl]
+  lazy val GReset = wire [GameResetImpl]
 
 }
 
