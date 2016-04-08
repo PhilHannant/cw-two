@@ -3,33 +3,33 @@ package game
 import traits._
 
 
-class GameImpl() extends Game with Injector {
+class GameImpl() extends GameAbstractImpl {
   /**
     * Run a one or more game sof mastermind, until the player
     * quits.
     */
 
 
-  var GameState = 0
-  val Code = inCode
+  var gameState = 0
+  val code :Array[Colours] = Array.fill(codeLength)(colour((Math.random() * colour.length).toInt))
 
 
   override def runGames = {
 
-    println(IntGen.Message(GameState))
-    println("Code is" + Code)
-    GameState = 1
-    while(GCount.GuessLeft > 0 && GameState != 2 ){
+    println(IntGen.Message(gameState))
+    if (getShowCode()) println("Code is" + code.toString)
+    gameState = 1
+    while(GCount.GuessLeft > 0 && gameState != 2 ){
       println("You have " + GCount.GuessLeft + " Guesses left")
-      println(IntGen.Message(GameState))
+      println(IntGen.Message(gameState))
       val Answer = InParse.Input()
-      val CorrectMarkers = GuessCheck.CheckGuess(Answer, Code)
+      val CorrectMarkers = GuessCheck.CheckGuess(Answer, code)
       println("You Got " + CorrectMarkers(1) + " White Markers and " + CorrectMarkers(0) + " Black Markers")
       GCount.GuessOccured
-      if (CorrectMarkers(1) == Code.length) GameState = 2
+      if (CorrectMarkers(0) == code.length) gameState = 2
     }
-    if (GameState == 1) GameState = 3
-    print(IntGen.Message(GameState))
+    if (gameState == 1) gameState = 3
+    println(IntGen.Message(gameState))
     GReset.ResetGames
   }
 }
