@@ -1,8 +1,10 @@
 package game
 
-import traits.Game
+import traits.{Values, Injector, Game}
 
-abstract class GameAbstractImpl extends Game {
+import scala.Enumeration.ValueSet
+
+abstract class GameAbstractImpl extends Game with Injector with Values {
   private var showCode: Boolean = false
 
   /**
@@ -15,6 +17,9 @@ abstract class GameAbstractImpl extends Game {
     */
   def this(easy: Boolean) {
     this()
+    println("running")
     showCode = easy
   }
+
+  def getShowCode(): Boolean = showCode
 }
