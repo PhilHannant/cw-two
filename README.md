@@ -1,7 +1,5 @@
-# Coursework 2 Pair Programming
+# Coursework 2 Pair Programming Mastermind  
 
-Assignment Two  
-Mastermind  
 
 
 Ambrose Cole  
