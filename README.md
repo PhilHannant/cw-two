@@ -3,6 +3,6 @@
 Assignment Two  
 Mastermind  
 
-Authors  
+
 Ambrose Cole  
 Phil Hannant
