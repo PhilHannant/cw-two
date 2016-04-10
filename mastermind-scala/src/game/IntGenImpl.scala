@@ -2,7 +2,9 @@ package game
 
 import traits.InteractionGenerator
 
-
+/**
+  * Class which generates the messages displayed during the game
+  */
 class IntGenImpl extends InteractionGenerator{
   override def Message(mes: Int): String = mes match {
     case 0 => return "Welcome to the Game"

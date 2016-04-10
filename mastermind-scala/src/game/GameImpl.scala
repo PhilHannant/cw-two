@@ -13,7 +13,10 @@ class GameImpl() extends GameAbstractImpl(Factory.getEasy()) {
   var gameState = 0
   val code :List[Colours] = List.fill(codeLength)(colour((Math.random() * colour.length).toInt))
 
-
+  /**
+    * Function which runs game output
+    *
+    */
   override def runGames = {
 
     println(IntGen.Message(gameState))

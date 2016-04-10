@@ -3,5 +3,5 @@ package traits
 
 trait InputParser {
 
-  def Input() : List[Colours]
+  def Input(): List[Colours]
 }

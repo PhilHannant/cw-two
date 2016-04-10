@@ -2,8 +2,19 @@ package game
 
 import traits._
 
+/**
+  * Class which checks the players guess against the secret code
+  */
 
 class GuessCheckerImpl extends GuessChecker{
+
+  /**
+    * Class which asks user if they'd like to reset the game and runs OutPattern to match response to action
+    *
+    * @param ans a list of Colours representing the players answer
+    * @param code a list of Colours representing the secret code
+    * @return an array of ints representing the number of white and black markers
+    */
 
   override def CheckGuess(ans: List[Colours], code: List[Colours]): Array[Int] = {
 
